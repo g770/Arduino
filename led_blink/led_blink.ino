@@ -1,14 +1,13 @@
 const int LED = 9;
 
+// Initial setup code
 void setup() {
-  // put your setup code here, to run once:
-
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
 }
 
+// Main loop
 void loop() {
-  // put your main code here, to run repeatedly:
   for (int i = 100; i < 1000; i = i + 100) {
      digitalWrite(LED, HIGH);
      delay(i);
