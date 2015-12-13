@@ -15,6 +15,9 @@ void setup() {
 
 void loop() {
 
+  // Read the state of the button and set the 
+  // state of the LED accordingly.  The LED will 
+  // only be on if the button is held down.
   if (digitalRead(BUTTON) == LOW) {
     digitalWrite(LED, LOW);
   }

@@ -36,14 +36,18 @@ void setup() {
 
 void loop() {
 
+  // Read the current value of the button, making 
+  // sure to debounce the switch
   currentButton = debounce(lastButton);
 
-  // If the button was pressed
+  // If the button state has changed, toggle the LED state
   if (lastButton == LOW && currentButton == HIGH) {
     ledOn = !ledOn;
   }
 
   lastButton = currentButton;
+
+  // Write the new led state
   digitalWrite(LED, ledOn);
   
 }
